@@ -60,7 +60,7 @@ for keyword in keywords:
     print(f"正在搜尋關鍵字: {keyword}")
     no_results_count = 0  # 用來計算連續沒有結果的頁數
 
-    for page in range(1, 100):  # 爬取最多100頁
+    for page in range(1, 100):  # 爬取頁數
         params['page'] = str(page)
         print(f"正在爬取第 {page} 頁...")
         url = base_url + '&'.join([f'{key}={value}' for key, value in params.items()])
